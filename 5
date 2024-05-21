@@ -1,0 +1,40 @@
+print("the biggest number is", max(numsList))
+print("the smallest number is", min(numsList))
+print("the average is", sum(numsList)/len(numsList))
+print("the largest number is", findLargest(numsList))
+p1 =numsList.index(max(numsList))
+p2 =numsList.index(min(numsList))
+print("the position of the biggest number is", p1)
+print("the position of the smallest number is", p2)
+
+print( )
+
+stringsList = ["abc", "123", "2332", "aBBA", "heelloo", "1212", "DcEfD"]
+
+print( )
+
+food = [ ]
+iLikePesto = [ ]
+for num in range(10):
+  a = input("What’s your favourite food?")
+  if a == "Pesto":
+    iLikePesto.append("pesto")
+  else:
+    food.append(a)
+b = len(iLikePesto)
+print("Pesto is loved by", b, "people!")
+for num in range(b):
+  print("I like pesto")
+print("Other foods: ", food)
+
+print( )
+
+
+cerealList = [ ]
+arrived = False
+while arrived == False:
+  c = input("Enter Cereal: ")
+  cerealList.append(c)
+  if c == "sultana and bran" or c == "weetbix":
+    arrived = True
+print(cerealList)
