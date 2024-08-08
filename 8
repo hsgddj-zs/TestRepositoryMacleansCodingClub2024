@@ -1,0 +1,57 @@
+import random
+a = random.randint(1,100)
+arrived = False
+while not arrived:
+    b = int(input("guess the number:"))
+    if a == b:
+        arrived = True
+    elif a < b:
+        print("Your guess was too high.")
+    elif a > b:
+        print("Your guess was too low.")
+print("Correct!")
+
+print()
+
+letter = "a b c d e f g h i j k l m n o p q r s t u v w x y z"
+Letter = letter.split()
+Guess = []
+n = random.randint(1,26)
+x = Letter [n-1]
+arrived = False
+while not arrived:
+    y = input("Enter a letter: ")
+    if x == y:
+        arrived = True
+    else:
+        Guess.append(y)
+print("You guessed ", len(Guess), "times.")
+
+print()
+
+c = int(input("What number stop are you at?"))
+d = int(input("What is the stop you want to go to?"))
+e = d - c
+f = 5 + 2.50 * e
+print("The fare from Stop", c, "to Stop", d, "is $", f)
+
+print()
+
+p = input("Given a password:")
+s = 0
+if p.isdigit() = False:
+    s = s+1
+    if p.isalnum() = False:
+        s = s+1
+    elif p.islower() = False:
+        s = s+1
+    elif p.isupper() = False:
+        s = s+1
+    elif len(p)>=7:
+        s = s+1
+if s == 5:
+    print("strong")
+elif s == 3 or 4:
+    print("moderately strong")
+elif s == 0 or 1 or 2:
+    print("weak")
