@@ -1,2 +1,80 @@
-print("Hello World ! ")
-print("hi there")
+import random
+
+
+
+
+import urllib.request
+
+word_url = "http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain"
+response = urllib.request.urlopen(word_url)
+long_txt = response.read().decode()
+words = long_txt.splitlines()
+
+
+
+
+
+word = random.choice(words)
+print(word)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+word = "python"
+letters = [letter for letter in word]
+n = len(letters)
+wi = ["_"]
+w = [val for val in wi for i in range(n)]
+g = []
+gw = []
+print(w)
+print("")
+for i in range (2*n):
+    l = input("Guess a letter:")
+    wf = "".join(w)
+    if wf == word:
+        break
+    else:
+        if l in gw:
+            print("You already guessed that!")
+        else:
+            if l in letters:
+                p = letters.index(l)
+                w[p] = l
+                print(w)
+                print("Letters guessed:", g)
+                gw.append(l)
+            else:
+                if l in g:
+                    print("You already guessed that!")
+                else:
+                    print("Nope")
+                    g.append(l)
+                    print(w)
+                    print("Letters guessed:", g)
+    wf = "".join(w)
+    if wf == word:
+        break
+    print("")
+print("")
+if wf == word:
+    print("You win!")
+    print("The word was:", word)
+else:
+    print("He died rip :(")
+    print("The word was:", word)
