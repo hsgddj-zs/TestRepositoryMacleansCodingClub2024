@@ -1,0 +1,55 @@
+
+
+word = adopt
+
+W = list(word)
+L = []
+E = []
+
+
+
+print("Welcome to Wordle! You have 6 chances to guess a five word letter.")
+
+for i in range (6):
+    wf = "".join(L)
+    if wf == word:
+        break
+    else:
+        A = input ("Attempt", i, "/ 6:")
+        L = list (A)
+
+        while == False
+        while len(L)<5 or len (L)> 5:
+            if len (L)<5:
+                print("Not enough letters.")
+                A = input("Try again:")
+            elif len (L)>5:
+                print("Only 5-letter words.")
+                A = input("Try again:")
+            else:
+            while == True 
+    
+        L = list (A)
+
+        for w, l, e in zip (W, L, E):
+
+            if w == l:
+                e == "🟩"
+            elif l in W:
+                e == "🟨"
+            else:
+                e == "⬛️"
+        
+        EN = "".join(E)
+        print(EN)
+    
+          
+    wf = "".join(L)
+    if wf == word:
+        break
+    print("")
+
+if wf == word:
+    print("Congratulations! You guessed", word, "correctly.")
+else:
+    print("Unfortunate! The word was", word)
